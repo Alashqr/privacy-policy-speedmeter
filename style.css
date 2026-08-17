@@ -1,0 +1,355 @@
+/* ==========================================
+   التصميم العام - أنيق وعصري
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0A192F, #1a365d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================
+   الحاوية الرئيسية
+   ========================================== */
+.container {
+    background: #FFFFFF;
+    border-radius: 28px;
+    padding: 40px 45px;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   زر تبديل اللغة - teal
+   ========================================== */
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #008080;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+.lang-switch:hover {
+    background: #006666;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+}
+
+.lang-switch:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================
+   الهيدر
+   ========================================== */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.logo-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #008080, #00b3b3);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #0A192F;
+    margin-top: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header .subtitle {
+    color: #8892B0;
+    font-size: 15px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   الشارة (Badge)
+   ========================================== */
+.badge {
+    display: inline-block;
+    background: #008080;
+    color: #FFFFFF;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 10px rgba(0, 128, 128, 0.2);
+}
+
+/* ==========================================
+   الفاصل
+   ========================================== */
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, #E1E8F0, #008080, #E1E8F0);
+    margin: 20px 0 25px 0;
+    border: none;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   محتوى السياسة
+   ========================================== */
+.content {
+    color: #334E68;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.content h2 {
+    color: #0A192F;
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #E1E8F0;
+    padding-bottom: 8px;
+    font-weight: 700;
+    position: relative;
+}
+
+.content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: #008080;
+    border-radius: 2px;
+}
+
+.content p {
+    margin-bottom: 12px;
+}
+
+.content ul {
+    margin: 10px 20px 20px 30px;
+}
+
+.content ul li {
+    margin-bottom: 6px;
+    position: relative;
+    padding-right: 8px;
+}
+
+.content ul li::before {
+    content: '•';
+    color: #008080;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* ==========================================
+   صندوق التمييز - teal
+   ========================================== */
+.highlight-box {
+    background: #F0F8F8;
+    padding: 20px 26px;
+    border-radius: 14px;
+    border-right: 4px solid #008080;
+    margin: 18px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 128, 128, 0.06);
+}
+
+.highlight-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 128, 128, 0.12);
+}
+
+.highlight-box p {
+    font-weight: 600;
+    color: #0A192F;
+}
+
+.highlight-box ul {
+    margin: 6px 0 0 20px;
+}
+
+.highlight-box ul li::before {
+    color: #008080;
+}
+
+/* ==========================================
+   التذييل
+   ========================================== */
+.footer {
+    margin-top: 35px;
+    padding-top: 18px;
+    border-top: 1px solid #E1E8F0;
+    text-align: center;
+    color: #8892B0;
+    font-size: 13px;
+}
+
+.footer a {
+    color: #008080;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #006666;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   تحسينات للشاشات الصغيرة
+   ========================================== */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 18px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .lang-switch {
+        top: 12px;
+        left: 12px;
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 32px;
+    }
+
+    .highlight-box {
+        padding: 14px 18px;
+    }
+
+    .content ul {
+        margin: 8px 10px 16px 20px;
+    }
+
+    .header .subtitle {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 18px 12px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .content {
+        font-size: 13px;
+    }
+
+    .lang-switch {
+        top: 10px;
+        left: 10px;
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 3px 12px;
+    }
+}
+
+/* ==========================================
+   تحسينات إضافية للقراءة
+   ========================================== */
+.content strong {
+    color: #0A192F;
+}
+
+.content a {
+    color: #008080;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content a:hover {
+    color: #006666;
+    text-decoration: underline;
+}
+
+/* تنسيق القوائم المتداخلة */
+.content ul ul {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* ==========================================
+   تأثيرات حركية خفيفة
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.highlight-box {
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.1s;
+}

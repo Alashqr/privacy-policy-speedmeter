@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سياسة الخصوصية - SpeedMeter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A192F, #172A45);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            color: #0A192F;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #0A192F;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8892B0;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .lang-card {
+            background: #F0F4F8;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-decoration: none;
+            color: #0A192F;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .lang-card:hover {
+            background: #E1E8F0;
+            transform: translateY(-5px);
+            border-color: #0A192F;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .lang-card h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .lang-card p {
+            color: #627D98;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E1E8F0;
+            color: #8892B0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #0A192F;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+            .lang-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📊</div>
+        <h1>SpeedMeter</h1>
+        <p class="subtitle">سياسة الخصوصية - Privacy Policy</p>
+
+        <div class="language-grid">
+            <a href="privacy-policy-ar.html" class="lang-card">
+                <div class="icon">🇸🇦</div>
+                <h2>العربية</h2>
+                <p>اقرأ سياسة الخصوصية باللغة العربية</p>
+            </a>
+            <a href="privacy-policy-en.html" class="lang-card">
+                <div class="icon">🇬🇧</div>
+                <h2>English</h2>
+                <p>Read Privacy Policy in English</p>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 SpeedMeter - <a href="#">جميع الحقوق محفوظة</a></p>
+        </div>
+    </div>
+</body>
+</html>

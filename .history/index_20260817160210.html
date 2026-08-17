@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سياسة الخصوصية - SpeedMeter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A192F, #1a365d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 40px 45px;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        /* زر تبديل اللغة */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #0A192F;
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .lang-switch:hover {
+            background: #1a365d;
+            transform: scale(1.05);
+        }
+
+        .lang-switch i {
+            margin-left: 6px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 10px;
+        }
+
+        .logo {
+            font-size: 44px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #0A192F;
+            margin-bottom: 4px;
+        }
+
+        .header .subtitle {
+            color: #8892B0;
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, #E1E8F0, #0A192F, #E1E8F0);
+            margin: 20px 0 25px 0;
+            border: none;
+        }
+
+        /* محتوى السياسة */
+        .content {
+            color: #334E68;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .content h2 {
+            color: #0A192F;
+            font-size: 19px;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #E1E8F0;
+            padding-bottom: 8px;
+        }
+
+        .content p {
+            margin-bottom: 12px;
+        }
+
+        .content ul {
+            margin: 10px 20px 20px 30px;
+        }
+
+        .content ul li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: #F0F4F8;
+            padding: 18px 24px;
+            border-radius: 14px;
+            border-right: 4px solid #0A192F;
+            margin: 18px 0;
+        }
+
+        .highlight-box ul {
+            margin: 6px 0 0 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0A192F;
+            color: #FFFFFF;
+            padding: 3px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 35px;
+            padding-top: 18px;
+            border-top: 1px solid #E1E8F0;
+            text-align: center;
+            color: #8892B0;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #0A192F;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 18px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .content {
+                font-size: 14px;
+            }
+            .lang-switch {
+                top: 12px;
+                left: 12px;
+                padding: 6px 14px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- زر تبديل اللغة -->
+        <button class="lang-switch" id="langToggle" onclick="toggleLanguage()">
+            <span id="langIcon">🇸🇦</span>
+            <span id="langText">English</span>
+        </button>
+
+        <!-- الهيدر -->
+        <div class="header">
+            <span class="logo">📊</span>
+            <h1 id="appTitle">SpeedMeter</h1>
+            <div class="subtitle" id="pageSubtitle">سياسة الخصوصية</div>
+            <div class="badge" id="updateDate">📅 17 أغسطس 2026</div>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- المحتوى -->
+        <div class="content" id="content">
+            <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+
+        <div class="footer">
+            <p>© 2026 SpeedMeter - <a href="#" id="rightsText">جميع الحقوق محفوظة</a></p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // البيانات باللغتين العربية والإنجليزية
+        // ============================================
+        const translations = {
+            ar: {
+                title: "SpeedMeter",
+                subtitle: "سياسة الخصوصية",
+                date: "📅 17 أغسطس 2026",
+                rights: "جميع الحقوق محفوظة",
+                langBtn: "English",
+                langIcon: "🇸🇦",
+                content: `
+                    <h2>1. مقدمة</h2>
+                    <p>
+                        مرحباً بك في تطبيق <strong>SpeedMeter</strong>. تطبيقنا بسيط للغاية،
+                        وظيفته الوحيدة هي <strong>عرض سرعة اتصال الإنترنت في شريط المهام</strong>
+                        (شريط الإشعارات). نحن نلتزم بحماية خصوصيتك.
+                    </p>
+
+                    <h2>2. ما الذي يفعله التطبيق؟</h2>
+                    <p>
+                        تطبيق <strong>SpeedMeter</strong> يقوم بالأمر الوحيد التالي:
+                    </p>
+                    <ul>
+                        <li>عرض سرعة التحميل والرفع للإنترنت في شريط الإشعارات.</li>
+                        <li>يعمل بشكل مستمر في الخلفية لعرض السرعة بشكل فوري.</li>
+                    </ul>
+
+                    <h2>3. جمع البيانات</h2>
+                    <div class="highlight-box">
+                        <p><strong>❌ لا نجمع أي بيانات شخصية على الإطلاق.</strong></p>
+                        <ul>
+                            <li>لا نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك.</li>
+                            <li>لا نتتبع موقعك الجغرافي.</li>
+                            <li>لا نخزن أي بيانات على خوادم خارجية.</li>
+                            <li>لا نشارك أي بيانات مع أطراف ثالثة.</li>
+                        </ul>
+                    </div>
+
+                    <h2>4. الأذونات المطلوبة</h2>
+                    <p>
+                        التطبيق يحتاج إلى أذونات بسيطة جداً لتشغيل وظيفته الأساسية:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>الإشعارات (POST_NOTIFICATIONS):</strong>
+                            لعرض السرعة في شريط الإشعارات (مطلوب في Android 13+).
+                        </li>
+                        <li>
+                            <strong>حالة الشبكة (ACCESS_NETWORK_STATE):</strong>
+                            لمعرفة ما إذا كنت متصلاً بالإنترنت أم لا.
+                        </li>
+                    </ul>
+
+                    <h2>5. أمان البيانات</h2>
+                    <p>
+                        بما أن التطبيق <strong>لا يجمع ولا يخزن</strong> أي بيانات،
+                        فإن خطر اختراق معلوماتك أو تسريبها هو <strong>صفر</strong>.
+                        كل ما يفعله هو قراءة سرعة الإنترنت وعرضها لحظياً.
+                    </p>
+
+                    <h2>6. حقوقك</h2>
+                    <ul>
+                        <li>يمكنك إلغاء تثبيت التطبيق في أي وقت.</li>
+                        <li>يمكنك إلغاء الأذونات من إعدادات جهازك.</li>
+                        <li>لا توجد بيانات مخزنة ليتم حذفها.</li>
+                    </ul>
+
+                    <h2>7. التواصل</h2>
+                    <p>
+                        إذا كان لديك أي سؤال، يمكنك التواصل عبر البريد الإلكتروني:
+                        <br />
+                        <strong>📧 your-email@example.com</strong>
+                    </p>
+                `
+            },
+            en: {
+                title: "SpeedMeter",
+                subtitle: "Privacy Policy",
+                date: "📅 August 17, 2026",
+                rights: "All Rights Reserved",
+                langBtn: "العربية",
+                langIcon: "🇬🇧",
+                content: `
+                    <h2>1. Introduction</h2>
+                    <p>
+                        Welcome to <strong>SpeedMeter</strong>. Our app is very simple —
+                        its only function is to <strong>display internet speed in the status bar</strong>
+                        (notification bar). We are committed to protecting your privacy.
+                    </p>
+
+                    <h2>2. What Does the App Do?</h2>
+                    <p>
+                        <strong>SpeedMeter</strong> does only one thing:
+                    </p>
+                    <ul>
+                        <li>Display download and upload internet speed in the notification bar.</li>
+                        <li>Runs continuously in the background to show real-time speed.</li>
+                    </ul>
+
+                    <h2>3. Data Collection</h2>
+                    <div class="highlight-box">
+                        <p><strong>❌ We do NOT collect any personal data at all.</strong></p>
+                        <ul>
+                            <li>We don't ask for your name, email, or phone number.</li>
+                            <li>We don't track your location.</li>
+                            <li>We don't store any data on external servers.</li>
+                            <li>We don't share any data with third parties.</li>
+                        </ul>
+                    </div>
+
+                    <h2>4. Permissions Required</h2>
+                    <p>
+                        The app needs very simple permissions to perform its basic function:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Notifications (POST_NOTIFICATIONS):</strong>
+                            To display speed in the notification bar (required on Android 13+).
+                        </li>
+                        <li>
+                            <strong>Network State (ACCESS_NETWORK_STATE):</strong>
+                            To check if you are connected to the internet.
+                        </li>
+                    </ul>
+
+                    <h2>5. Data Security</h2>
+                    <p>
+                        Since the app <strong>does not collect or store</strong> any data,
+                        the risk of data breach or leakage is <strong>zero</strong>.
+                        It only reads and displays internet speed in real-time.
+                    </p>
+
+                    <h2>6. Your Rights</h2>
+                    <ul>
+                        <li>You can uninstall the app at any time.</li>
+                        <li>You can revoke permissions from your device settings.</li>
+                        <li>There is no stored data to delete.</li>
+                    </ul>
+
+                    <h2>7. Contact Us</h2>
+                    <p>
+                        If you have any questions, please contact us at:
+                        <br />
+                        <strong>📧 your-email@example.com</strong>
+                    </p>
+                `
+            }
+        };
+
+        // ============================================
+        // منطق التبديل بين اللغتين
+        // ============================================
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = (currentLang === 'ar') ? 'en' : 'ar';
+            applyLanguage(currentLang);
+        }
+
+        function applyLanguage(lang) {
+            const t = translations[lang];
+
+            // تحديث النصوص الثابتة
+            document.getElementById('appTitle').textContent = t.title;
+            document.getElementById('pageSubtitle').textContent = t.subtitle;
+            document.getElementById('updateDate').textContent = t.date;
+            document.getElementById('rightsText').textContent = t.rights;
+
+            // تحديث زر اللغة
+            document.getElementById('langText').textContent = t.langBtn;
+            document.getElementById('langIcon').textContent = t.langIcon;
+
+            // تحديث المحتوى
+            document.getElementById('content').innerHTML = t.content;
+
+            // تحديث اتجاه الصفحة
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            document.documentElement.lang = (lang === 'ar') ? 'ar' : 'en';
+
+            // تحديث هوامش highlight-box للاتجاه الجديد
+            const boxes = document.querySelectorAll('.highlight-box');
+            boxes.forEach(box => {
+                if (lang === 'ar') {
+                    box.style.borderRight = '4px solid #0A192F';
+                    box.style.borderLeft = 'none';
+                } else {
+                    box.style.borderLeft = '4px solid #0A192F';
+                    box.style.borderRight = 'none';
+                }
+            });
+
+            // تحديث زر اللغة من اليمين أو اليسار
+            const btn = document.getElementById('langToggle');
+            if (lang === 'ar') {
+                btn.style.left = '20px';
+                btn.style.right = 'auto';
+            } else {
+                btn.style.left = 'auto';
+                btn.style.right = '20px';
+            }
+        }
+
+        // ============================================
+        // تشغيل الصفحة باللغة العربية افتراضياً
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            applyLanguage('ar');
+        });
+    </script>
+
+</body>
+</html>
